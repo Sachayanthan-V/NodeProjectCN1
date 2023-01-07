@@ -1,0 +1,511 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'gill sans';
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background-color: #322256;
+}
+
+header {
+    // border: 1px solid white;
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1F1025 !important;
+        width: 100vw;
+        height: 9vh;
+        border: 0px;
+        border-radius: 0px;    
+    }
+    .logosection {
+        width: 50%;
+        a{
+            margin-left: 2vh;
+            img{
+                width: 5vh;
+                height: 5vh;
+            }
+        }
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: white;
+        height: 6vh;
+        font-size: 3vw;
+    }
+
+    navaside {
+        width: 45%;
+        height: 6vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        button {
+            height: 5vh;
+            width: 10vw;
+            color: white;
+            border: 0px;
+            border-radius: 15vw;
+            font-size: 1.2rem;
+            margin-left: 20px;
+            min-width: 70px;
+        }
+
+        .homeBtn {
+            background-color: #9C0B90;
+        }
+
+        .AboutBtn {
+            background-color: #651093;
+        }
+
+
+    }
+
+}
+
+.dropdownWidth {
+    max-width: 30px;
+}
+
+#ddAlign {
+    margin: 0px;
+    padding: 0px;
+}
+
+#subheading {
+
+    height: 5vh;
+    width: 100vw;
+    // border: 1px solid whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .subCreateTaskBtn {
+        width: 30vw;
+
+    }
+
+    .subAddBtns {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 40vw;
+        .buttonC {
+            background-color: #00C889;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0px;            
+            border-radius: 1vw;
+            min-width: 75px;
+            margin-left: 10px;
+            font-size: 1rem !important;
+            min-height: 3vh;
+
+        }
+
+        .dropdown {    
+            #ddAlign {            
+                width: 50px;    
+            }
+            
+        }
+    
+    }
+
+    .subAnalyticsBtn {
+        width: 23vw;
+    }
+
+    .hideSubBtn {
+        background-color: #00C889;
+        color: white;
+        border-radius: 2vw;
+    }
+
+}
+
+.hideSubBtn {
+    visibility: hidden;
+}
+
+
+main {
+    width: 100vw !important;
+    height: 85vh;
+    display: flex;
+
+    #main {
+        width: 76vw;
+        height: 84.5vh;
+        margin-right: 1vw;
+    }
+
+    aside {
+        width: 23vw;
+        min-width: 230px;
+        height: 84.5vh;
+    }
+
+}
+
+.buttonhover:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+
+////////////////////// come to main //////////////////////////////////////
+////////////////////// come to main //////////////////////////////////////
+////////////////////// come to main //////////////////////////////////////
+////////////////////// come to main //////////////////////////////////////
+////////////////////// come to main //////////////////////////////////////
+
+
+
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: repeat(auto-fit, minmax(17vh, 20vh));
+    column-gap: 2px;
+}
+
+main, #main {
+    overflow: hidden;
+    overflow: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+main::-webkit-scrollbar, #main::-webkit-scrollbar {
+    display: none;
+}
+
+
+.card {
+    
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-width: 500px;
+    position: relative;
+    height: 120px;
+    flex-direction: row;
+    border: 0px;
+    margin-top: 1.5vh;
+}
+
+.card .CCHolder {
+    width: 100%;
+    padding: 2% 2%;
+    background-color: #25103E;
+    border-radius: 1.8em;
+    height: 120px;
+    max-height: 120px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .CCHolder .headAndTag {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    font-size: 1em;
+}
+
+.card .CCHolder .headAndTag .headerContainer {
+    width: 75%;
+}
+
+.card .CCHolder .headAndTag .headerContainer .CardHeader{
+    font-size: 1.1em;
+    max-width: 300px;
+    max-height: 18px;
+    overflow: hidden;
+    color: #29C38D;
+}
+
+.card .CCHolder .headAndTag .headerContainer .CardSubHeader{
+    font-size: 0.6em;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    color: whitesmoke;
+    opacity: 0.8;
+}
+
+.card .CCHolder .headAndTag .cardCatagory {
+    border-radius: 1em;
+    padding: 7px;
+    width: 16vh;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    
+}
+
+/* 290D4A */
+
+.dateStatus {
+    width: 98%;
+    background-color: #290D4A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 30px;
+    margin-left: 0px; 
+    margin-top: 1vh;
+    height: 7vh;
+}
+
+.datetimeholder {
+    width: 50%;
+    height: 6vh;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center !important;
+}
+
+.startDateHolder , .endDateHolder{
+    margin-left: 5px;
+    display: flex;
+    margin-top: 1vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.startDateHolder .startDate, .endDateHolder .endDate{
+    color: white;
+    font-size: 0.8em;
+}
+
+.startTime , .endTime {
+    color: whitesmoke;
+    opacity: 0.8;
+    font-size: 0.7em;
+}
+
+
+
+.CBHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 120px;
+    height: 90px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+.HolderActivateBtn {
+    width: 35px;
+    height: 25px;
+    border-radius: 10px;
+    border: 0px;
+    color: white !important;    
+    text-decoration : none !important;
+    text-align: center !important;
+}
+
+.HolderActivateBtn:hover {
+    transform: scale(150%);
+    transition: all 0.5s ;
+    color: white !important;
+    text-decoration : none !important;
+    text-align: center !important;
+}
+
+.cancelBtn {
+    background-color: #C80078;
+    color: white;
+    text-decoration : none;
+    text-align: center;
+}
+
+.doneBtn {
+    background-color: #079A58;
+    color: white;
+    text-decoration : none;
+    text-align: center;
+}
+
+.editBtn {
+    background-color: #9C0B90;
+    color: white;
+    text-decoration : none;
+    text-align: center;
+}
+
+
+
+
+.card:nth-child(5n+1) .CCHolder .headAndTag .cardCatagory{
+    background-color: #C562A6;
+}
+
+.card:nth-child(5n+2) .CCHolder .headAndTag .cardCatagory{
+    background-color: #00C889;
+}
+
+.card:nth-child(5n+3) .CCHolder .headAndTag .cardCatagory{
+    background-color: #C80096;
+}
+
+.card:nth-child(5n+4) .CCHolder .headAndTag .cardCatagory{
+    background-color: #C89600;
+}
+
+.card:nth-child(5n+5) .CCHolder .headAndTag .cardCatagory{
+    background-color: #C80071;
+}
+
+/*===========================================================*/
+
+.card:nth-child(5n+1) .CCHolder .headAndTag .headerContainer .CardHeader{
+    color: #29C38D;
+}
+
+.card:nth-child(5n+2) .CCHolder .headAndTag .headerContainer .CardHeader{
+    color: #BBC329;
+}
+
+.card:nth-child(5n+3) .CCHolder .headAndTag .headerContainer .CardHeader{
+    color: #98EC45;
+}
+
+.card:nth-child(5n+4) .CCHolder .headAndTag .headerContainer .CardHeader{
+    color: #45DCA7;
+}
+
+.card:nth-child(5n+5) .CCHolder .headAndTag .headerContainer .CardHeader{
+    color: #EE42F1;
+}
+
+
+/* ======================================================== */
+
+.card:nth-child(5n+1) {
+    /* background-color: #C562A6; */
+    background-image: linear-gradient(to right, #C562A6, #322256, #322256);
+}
+
+.card:nth-child(5n+2) {
+    /* background-color: #00C889; */
+    background-image: linear-gradient(to right, #00C889, #322256, #322256);
+}
+
+.card:nth-child(5n+3) {
+    /* background-color: #C80096; */
+    background-image: linear-gradient(to right, #C80096, #322256, #322256);
+}
+
+.card:nth-child(5n+4) {
+    /* background-color: #C89600; */
+    background-image: linear-gradient(to right, #C89600, #322256, #322256);
+}
+
+.card:nth-child(5n+5) {
+    /* background-color: #C80071; */
+    background-image: linear-gradient(to right, #C80071, #322256, #322256);
+}
+
+
+.card {
+    transform: scaleX(0.9);
+}
+
+.cancelBtn {
+    background-color: #C80078;
+}
+
+.doneBtn {
+    background-color: #079A58;
+}
+
+.editBtn {
+    background-color: #9C0B90;
+}
+
+.statusActive, 
+.statusCompleted, 
+.statusOverDue ,
+.statusNotStated 
+{
+    border-radius: 17px;
+    padding: 8px;
+    width: 23vh;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    height: 5.5vh;
+    margin-top: 1vh;
+}
+
+.statusCompleted     {
+    background-color :  #216C4C ;
+}
+.statusActive        {
+    background-color :  #651093 ;
+}
+.statusOverDue      {
+    background-color :  #6C2121 ;
+}
+.statusNotStated    {
+    background-color :  #21276C ;
+}
+
+a:not([href]):not([tabindex]) {
+    color: white !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+a{
+    color: white !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+.formButtons {
+    background: none ;
+    border: 0px;
+    margin-left: 10px;
+    display : flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.dropdown-menu {
+    a {
+        background-color: rgb(248, 248, 248);
+        color: black;
+        text-decoration: none;
+        text-align: start;
+    }
+}

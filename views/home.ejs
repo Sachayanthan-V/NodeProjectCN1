@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+    <!-- bootstrap cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/home.css"   >
+    <link rel="stylesheet" href="/CSS/screen.css" >
+    <link rel="stylesheet" href="/CSS/aside.css"  >
+    <link rel="stylesheet" href="/CSS/grid.css"   >
+    <link rel="stylesheet" href="/CSS/buttons.css">
+
+</head>
+<body>
+
+    <!-- Jquery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <header>
+        <nav class="navbar navbar-light headermain">
+            <div class="logosection">
+                <a class="navbar-brand" href="#">
+                    <img src="/Images/logo/T-logo.png"  class="d-inline-block align-top" alt="">
+                </a>
+                Todo
+            </div>
+            <navaside>
+                <button class="homeBtn  buttonhover" id="homeBtn"     >Home</button>
+                <button class="AboutBtn buttonhover" id="AboutBtn"    >About</button>
+            </navaside>
+        </nav>
+    </header>
+
+    
+    <section id="subheading">
+        <button id="createTask" class="subCreateTaskBtn hideSubBtn">CREATE</button>
+        <div id="subAddBtns" class="subAddBtns">
+            <div class="dropdown">
+                <button class="buttonC" id="ddAlign" class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ⚡<span class="hideSpan">sort by</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a href="http://localhost:8000/filter/?val=Work"            class="dropdown-item" id="workBtn"     >Work          </a>
+                  <a href="http://localhost:8000/filter/?val=Entertainment"   class="dropdown-item" id="entertainBtn">Entertainment </a>
+                  <a href="http://localhost:8000/filter/?val=Personal"        class="dropdown-item" id="personalBtn" >Personal      </a>
+                  <a href="http://localhost:8000/filter/?val=Social"          class="dropdown-item" id="socialBtn"   >Social        </a>
+                  <a href="http://localhost:8000/filter/?val=Others"          class="dropdown-item" id="othersBtn"   >Others        </a>
+                  <a href="http://localhost:8000/filterstatus/?val=Active"         class="dropdown-item" id="othersBtn"   >Active task   </a>
+                  <a href="http://localhost:8000/filterstatus/?val=Completed"      class="dropdown-item" id="othersBtn"   >Completed task</a>
+                </div>
+            </div>
+            <form class = "formButtons" action="http://localhost:8000/" method="get">
+                <button class="buttonC" type="submit">
+                    🛖<span class="hideSpan">home</span>
+                </button>
+            </form>
+            <form class = "formButtons" action="http://localhost:8000/grid/changeGridState" method="get">
+                <button class="buttonC" type="submit">
+                    ⭐ <span class="hideSpan">Grid</span>
+                </button>
+            </form>
+        </div>
+        <button id="AnalyticsBtn" class="subAnalyticsBtn  hideSubBtn">Analytics</button>
+    </section>
+
+
+    <main>
+
+        <% if ( isGrid == false ) { %>
+            
+            <div id="main">
+
+                <% for(let i of todoList) { %>
+
+                    <div id="card1" class="card">
+
+                        <div id="cardContentHolder1" class="CCHolder">
+                            <div id="headAndTag1" class="headAndTag">
+                                <div id="headerContainer1" class="headerContainer">
+                                    <h1 class="CardHeader"> <%= i.titleName %>  </h1>
+                                    <h1 class="CardSubHeader"> <%= i.titleDescription  %>  </h1>
+                                </div>
+                                <div id="catagory1" class="cardCatagory"> <%= i.todoCatagory  %>  </div>
+                            </div>
+                            <div id="dateStatus1" class="dateStatus">
+                                <div class="datetimeholder">
+                                    <div id="startDateHolder1" class="startDateHolder">
+                                        <h3 id="startDate1" class="startDate"> <%= i.startDate  %>  </h3>
+                                        <h3 id="startTime1" class="startTime"> <%= i.startTime  %>  </h3>
+                                    </div>
+                                    <div id="timerArrow" class="timerArrow">→</div>
+                                    <div id="endDateHolder1" class="endDateHolder">
+                                        <h3 id="endDate1" class="endDate"> <%= i.endDate  %> </h3>
+                                        <h3 id="endTime1" class="endTime"> <%= i.endTime  %> </h3>
+                                    </div>
+                                </div>
+                                <div id="status1" class= <%= 'status'+i.todoStatus %>>  <%= i.todoStatus  %>  </div>
+                            </div>
+                        </div>
+
+                        <div id="CBHolder1" class="CBHolder">
+                            <a id="cancelBtn1" class="HolderActivateBtn cancelBtn" target="_self" href = "http://localhost:8000/deleteid/<%=i.id%>"  >X</a>
+                            <a id="doneBtn1"   class="HolderActivateBtn doneBtn"   target="_self" href = "http://localhost:8000/doneid/<%=i.id%>"  >✓</a>
+                            <a id="editBtn1"   class="HolderActivateBtn editBtn"   target="_self" href = "http://localhost:8000/edit/<%=i.id%>"  >✎</a>
+                        </div>
+
+                    </div>
+
+                <% } %> 
+
+            </div>
+
+        <% } %> 
+
+        <% if ( isGrid == true ) { %>
+            
+            <div id="mainGrid">
+
+                <% for(let i of todoList) { %>
+
+                    <div id="card1" class="cardGrid">
+
+                        <div id="cardContentHolder1" class="CCHolderGrid">
+                            <div id="headAndTag1" class="headAndTagGrid">
+                                <div id="headerContainer1" class="headerContainerGrid">
+                                    <h1 class="CardHeaderGrid"> <%= i.titleName %>  </h1>
+                                    <div id="catagory1" class="cardCatagoryGrid"> <%= i.todoCatagory  %> </div>
+                                </div>
+                                <h1 class="CardSubHeaderGrid">  <%= i.titleDescription  %>   </h1>
+                            </div>
+                            <div id="dateStatus1" class="dateStatusGrid">
+                                <div id="status1" class= <%= 'status'+i.todoStatus %>>  <%= i.todoStatus  %>  </div>
+                                <div class="datetimeholderGrid">
+                                    <div id="startDateHolder1" class="startDateHolderGrid">
+                                        <h3 id="startDate1" class="startDateGrid"> <%= i.startDate  %> </h3>
+                                        <h3 id="startTime1" class="startTimeGrid"> <%= i.startTime  %>  </h3>
+                                    </div>
+                                    <div id="timerArrow" class="timerArrowGrid">→</div>
+                                    <div id="endDateHolder1" class="endDateHolderGrid">
+                                        <h3 id="endDate1" class="endDateGrid"> <%= i.endDate  %> </h3>
+                                        <h3 id="endTime1" class="endTimeGrid"> <%= i.endTime  %> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div id="CBHolder1" class="CBHolder">
+                            <a id="cancelBtn1" class="HolderActivateBtn cancelBtn" target="_self" href = "http://localhost:8000/deleteid/<%=i.id%>"  >X</a>
+                            <a id="doneBtn1"   class="HolderActivateBtn doneBtn"   target="_self" href = "http://localhost:8000/doneid/<%=i.id%>"  >✓</a>
+                            <a id="editBtn1"   class="HolderActivateBtn editBtn"   target="_self" href = "http://localhost:8000/edit/<%=i.id%>"  >✎</a>
+                        </div>
+                    </div>
+            
+                <% } %> 
+
+            </div>
+
+        <% } %> 
+
+
+        <aside class="hide800">
+
+            <div id="currentStatus">
+                <h1>Current Status</h1>
+                <div class="completedStatus">
+                    <label for="" class="CompletedLabel">Completed</label>
+                    <p class="CompletedPercentage">23%</p>
+                    <p>-</p>
+                    <p class="CompletedValue">10</p>
+                </div>
+                <div class="ActiveStatus"   >
+                    <label for="" class="ActiveLabel">Active</label>
+                    <p class="ActivePercentage">23%</p>
+                    <p>-</p>
+                    <p class="ActiveValue">10</p>
+                </div>
+                <div class="overDueStatus"  >
+                    <label for="" class="OverDueLabel">Over Due</label>
+                    <p class="OverDuePercentage">23%</p>
+                    <p>-</p>
+                    <p class="OverDueValue">10</p>
+                </div>
+                <div class="notStatedStatus">
+                    <label for="" class="NotStatedLabel">Not Stated</label>
+                    <p class="NotStatedPercentage">23%</p>
+                    <p>-</p>
+                    <p class="NotStatedValue">10</p>
+                </div>
+            </div>
+        
+    
+            <div id="Catagory">
+                <h1>Catagories</h1>
+                <div id="catContent">
+                    <label for="" class="WorkCatLabel">Work</label>
+                    <p class="WorkCat">10</p>
+                </div>
+                
+                <div id="catContent">
+                    <label for="" class="EntertainCatLabel">Entertainment</label>
+                    <p class="EntertainCat">10</p>
+                </div>
+                
+                <div id="catContent">
+                    <label for="" class="SocialCatLabel">Social</label>
+                    <p class="SocialCat">10</p>
+                </div>
+                
+                <div id="catContent">
+                    <label for="" class="PersonalCatLabel">Personal</label>
+                    <p class="PersonalCat">10</p>
+                </div>
+                
+                <div id="catContent">
+                    <label for="" class="OthersCatLabel">Others</label>
+                    <p class="OthersCat">10</p>
+                </div>
+    
+            </div>
+    
+            <button id="createNewTask" class="createNewTask">
+                Create New Task
+            </button>
+    
+        </aside>
+    
+
+    </main>
+
+
+
+    <div id="about" class="about">
+        
+        <div>
+            <h1>About</h1>
+            <p>
+                This is the website you use to maintain <br>
+                your todo's and make use of your time in<br>
+                an efficient way by using our product.<br>
+            </p>
+            <span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Sachayanthan V
+            </span>
+        
+            <button id="AboutExit">Close</button>
+
+        </div>
+
+    </div>
+
+    
+    <form id="createClass" class="createTask forms" action="/create-todo" method="post">
+        
+        <div id="CreateMain">
+            <header id="createTaskHeader"> Create New Task</header>
+        
+            <div id="createTaskContentHolder" class="formsCH"> 
+                <div class="modifyTags" >
+                    <label for="titleHeader">Title</label>
+                    <input id="createHead"       type="text" name="titleHeader" placeholder="Enter Title"  required>
+                </div>
+                <div class="modifyTags" >
+                    <label for="titleDescription">Description</label>
+                    <input id="createDesc"       type="text" name="titleDescription" placeholder="Enter Title Desc"  required>
+                </div>
+                <div class="modifyTags" >
+                    <label for="startDate">Start Date</label>
+                    <input id="createStartDate"  type="date" name= "startDate"   >
+                    <label for="startTime">Start Time</label>
+                    <input id="createStartTime"  type="time" name="startTime"  >
+                </div>
+                <div class="modifyTags" >
+                    <label for="createEndDate">End Date</label>
+                    <input id="createEndDate"    type="date" name="endDate"  >
+                    <label for="endTime">End Time</label>
+                    <input id="createEndTime"    type="time" name="endTime"  >
+                </div>
+                <div class="modifyTags" >
+                    <label for="catagory">Catagory</label>
+
+                    <select name="catagory" id="catagory">
+                        <option value="Work">Work</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Social">Social</option>
+                        <option value="Others">Others</option>
+
+                    </select>
+
+                </div>
+            </div>
+            <div id="createTaskButtonHolder" class="formsBh">  
+                <button type="reset" id="CreateTaskCancelBtn">Cancel</button>
+                <button type="submit" id="CreateTaskCreateBtn">Create</button>
+            </div>
+        </div>
+
+    </form>
+
+    
+    <form  id="modifyClass" class="modifyTask forms" action="/create-todo" method="post">
+        
+        <div id="ModifyMain">
+            <header id="modifyTaskHeader"> Modify Task</header>
+            
+            <div id="modifyTaskContentHolder" class="ormCH"> 
+                <div class="modifyTags">
+                    <label for="titleHeader">Title</label>
+                    <input id="ModifyHead" type="text" name="titleHeader" placeholder="Edit Title"  required>
+                </div>
+                <div class="modifyTags" >
+                    <label for="titleDescription">Description</label>
+                    <input id="ModifyDesc" type="text" name="titleDescription" placeholder="Enter Desc"  required>
+                </div>
+                <div class="modifyTags" >
+                    <label for="startDate">Start Time</label>
+                    <input id="modifyStartDate" type="date" name= "startDate"  >
+                    <label for="startTime">Start Time</label>
+                    <input id="modifyStartTime" type="time" name="startTime" >
+                </div>
+                <div class="modifyTags" >
+                    <label for="">End Date</label>
+                    <input id="modifyEndDate" type="date" name="endDate"  >
+                    <label for="endTime">End Time</label>
+                    <input id="modifyEndTime" type="time" name="endTime"  >
+                </div>
+                <div class="modifyTags" >
+                    <label for="catagory">Catagory</label>
+                    <select name="cars" id="cars">
+                        <option value="">Work</option>
+                        <option value="">Entertainment</option>
+                        <option value="">Personal</option>
+                        <option value="">Social</option>
+                        <option value="">Others</option>
+                    </select>
+                </div>
+            </div>
+            <div id="modifyTaskButtonHolder" class="formBH">  
+                <button type="reset" id="ModifyTaskCancelBtn">Cancel</button>
+                <button type="submit" id="ModifyTaskCreateBtn">Modify</button>
+            </div>
+        </div>
+
+    </form> 
+
+
+
+</body>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/JS/home.js"></script>
+
+</html>

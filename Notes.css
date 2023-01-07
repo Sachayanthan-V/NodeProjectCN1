@@ -1,0 +1,98 @@
+*{
+        margin: 0px;
+}
+
+.BACKGROUND {
+        background-color : #322256;
+}
+
+
+/* ========================================
+|               PAGE #3 :               |
+======================================== 
+            Current Status 
+========================================= */
+.Completed     {
+        background-color :  #216C4C ;
+}
+.Active        {
+        background-color :  #651093 ;
+}
+.OverDue      {
+        background-color :  #6C2121 ;
+}
+.NotStated    {
+        background-color :  #21276C ;
+}
+
+/* ========================================
+|               Catagory :             |
+======================================== */
+.School { background-color: #C562A6 ;}
+.School { background-color: #00C889 ;}
+.School { background-color: #C80096 ;}
+.School { background-color: #C89600 ;}
+.School { background-color: #C80071 ;}
+
+.BACKGROUND_Color {        
+        background-color:  #393A3E;
+        background-color:  #1F2645;
+}
+
+/* =========================================
+|       Create New Task : 00C889        |
+=========================================
+        Buttons 
+========================================= */
+
+.cancelBtn {
+    background-color: #C80078;
+}
+
+.doneBtn {
+    background-color: #079A58;
+}
+
+.editBtn {
+    background-color: #9C0B90;
+}
+
+/* =========================================
+                HEADERS
+========================================= */
+
+.a1 { background-color : #29C38D ;} 
+.a2 { background-color : #BBC329 ;}
+.a3 { background-color : #98EC45 ;}
+.a4 { background-color : #45DCA7 ;}
+.a5 { background-color : #EE42F1 ;}
+
+
+/* =========================================
+        DIVS
+========================================= */
+.main       { background-color : #25103E ; }
+.innerDiv   { background-color : #290D4A ; }
+
+/* =========================================
+        Grid 2,3
+========================================= */
+.Grid_background 
+{
+        background-color: #9C0B90;
+}
+
+/* =========================================
+                /absolute divs
+========================================= */
+
+.background {
+        background-color: #1D0A3A; /* background */
+        background-color: #511A6A; /* all buttons*/
+        background-color: #9C0707; /* cancel button*/
+        background-color: #819106; /*  Edit button */
+        background-color: #02AA02; /*  Create button  */
+        background-color: #2B7860; /* create header */
+        background-color: #816533; /* edit header   */
+
+}

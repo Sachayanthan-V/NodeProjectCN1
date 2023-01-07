@@ -1,0 +1,300 @@
+
+#mainGrid{
+    display: grid;
+    max-width: 80vw;
+    grid-template-columns: 1fr 1fr 1fr ;
+    // grid-template-columns: auto ;
+    grid-template-rows: repeat(auto-fit, minmax(30vh, 32vh));
+    column-gap: 2px;
+}
+
+#mainGrid{
+    overflow: hidden;
+    overflow: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+    color: white;
+}
+
+#mainGrid::-webkit-scrollbar{
+    display: none;
+}
+
+
+.cardGrid{
+    
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-width: 350px;
+    position: relative;
+    height: 220px;
+    flex-direction: row;
+    border: 0px;
+    margin-top: 1.5vh;
+    margin-bottom: 3vh;
+}
+
+.cardGrid .CCHolderGrid{
+    width: 100%;
+    padding: 2% 2%;
+    background-color: #25103E;
+    border-radius: 1.8em;
+    height: 220px;
+    max-height: 220px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardGrid .CCHolderGrid .headAndTagGrid{
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    font-size: 1em;
+
+    .CardSubHeaderGrid {
+        margin-top: 1vh;
+        font-size: 0.8em;
+        opacity: 0.8;
+    }
+}
+
+.cardGrid .CCHolderGrid .headAndTagGrid .headerContainerGrid{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardGrid .CCHolderGrid .headAndTagGrid .headerContainerGrid .CardHeaderGrid{
+    font-size: 1.1em;
+    max-width: 300px;
+    max-height: 18px;
+    overflow: hidden;
+    color: #29C38D;
+}
+
+.cardGrid .CCHolderGrid .headAndTagGrid .headerContainerGrid .CardSubHeaderGrid{
+    font-size: 0.6em;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    color: whitesmoke;
+    opacity: 0.8;
+}
+
+.cardGrid .CCHolderGrid .headAndTagGrid .cardCatagoryGrid{
+    border-radius: 1em;
+    padding: 7px;
+    width: 14vh;
+    min-width: 130px;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* 290D4A */
+
+.dateStatusGrid{
+    width: 98%;
+    background-color: #290D4A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    margin-left: 0px; 
+    height: 13vh;
+}
+
+.datetimeholderGrid{
+    width: 100%;
+    height: 6vh;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center !important;
+}
+
+.startDateHolderGrid , .endDateHolderGrid{
+    margin-left: 5px;
+    display: flex;
+    margin-top: 1vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.startDateHolderGrid .startDateGrid, .endDateHolderGrid .endDateGrid{
+    color: white;
+    font-size: 0.8em;
+}
+
+.startTimeGrid , .endTimeGrid{
+    color: whitesmoke;
+    opacity: 0.8;
+    font-size: 0.7em;
+}
+
+
+
+.CBHolderGrid{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 120px;
+    height: 90px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+.HolderActivateBtnGrid{
+    width: 35px;
+    height: 25px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+}
+
+.HolderActivateBtnGrid:hover{
+    transform: scale(150%);
+    transition: all 0.5s ;
+}
+
+.cancelBtnGrid{
+    background-color: #C80078;
+}
+
+.doneBtnGrid{
+    background-color: #079A58;
+}
+
+.editBtnGrid{
+    background-color: #9C0B90;
+}
+
+
+
+
+.cardGrid:nth-child(5n+1) .CCHolderGrid .headAndTagGrid .cardCatagoryGrid{
+    background-color: #C562A6;
+}
+
+.cardGrid:nth-child(5n+2) .CCHolderGrid .headAndTagGrid .cardCatagoryGrid{
+    background-color: #00C889;
+}
+
+.cardGrid:nth-child(5n+3) .CCHolderGrid .headAndTagGrid .cardCatagoryGrid{
+    background-color: #C80096;
+}
+
+.cardGrid:nth-child(5n+4) .CCHolderGrid .headAndTagGrid .cardCatagoryGrid{
+    background-color: #C89600;
+}
+
+.cardGrid:nth-child(5n+5) .CCHolderGrid .headAndTagGrid .cardCatagoryGrid{
+    background-color: #C80071;
+}
+
+/*===========================================================*/
+
+.cardGrid:nth-child(5n+1) .CCHolderGrid .headAndTagGrid .headerContainerGrid .CardHeaderGrid{
+    color: #29C38D;
+}
+
+.cardGrid:nth-child(5n+2) .CCHolderGrid .headAndTagGrid .headerContainerGrid .CardHeaderGrid{
+    color: #BBC329;
+}
+
+.cardGrid:nth-child(5n+3) .CCHolderGrid .headAndTagGrid .headerContainerGrid .CardHeaderGrid{
+    color: #98EC45;
+}
+
+.cardGrid:nth-child(5n+4) .CCHolderGrid .headAndTagGrid .headerContainerGrid .CardHeaderGrid{
+    color: #45DCA7;
+}
+
+.cardGrid:nth-child(5n+5) .CCHolderGrid .headAndTagGrid .headerContainerGrid .CardHeaderGrid{
+    color: #EE42F1;
+}
+
+
+/* ======================================================== */
+
+.cardGrid:nth-child(5n+1){
+    /* background-color: #C562A6; */
+    background-image: linear-gradient(to right, #C562A6, #322256, #322256);
+}
+
+.cardGrid:nth-child(5n+2){
+    /* background-color: #00C889; */
+    background-image: linear-gradient(to right, #00C889, #322256, #322256);
+}
+
+.cardGrid:nth-child(5n+3){
+    /* background-color: #C80096; */
+    background-image: linear-gradient(to right, #C80096, #322256, #322256);
+}
+
+.cardGrid:nth-child(5n+4){
+    /* background-color: #C89600; */
+    background-image: linear-gradient(to right, #C89600, #322256, #322256);
+}
+
+.cardGrid:nth-child(5n+5){
+    /* background-color: #C80071; */
+    background-image: linear-gradient(to right, #C80071, #322256, #322256);
+}
+
+
+.cardGrid{
+    transform: scaleX(0.9);
+}
+
+.cancelBtnGrid{
+    background-color: #C80078;
+}
+
+.doneBtnGrid{
+    background-color: #079A58;
+}
+
+.editBtnGrid{
+    background-color: #9C0B90;
+}
+
+.statusActiveGrid, 
+.statusCompletedGrid, 
+.statusOverDueGrid,
+.statusNotStatedGrid 
+{
+    border-radius: 17px;
+    padding: 8px;
+    width: 30vh;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    height: 5.5vh;
+    margin-top: 1vh;
+}
+
+.statusCompletedGrid{
+    background-color :  #216C4C ;
+}
+.statusActiveGrid{
+    background-color :  #651093 ;
+}
+.statusOverDueGrid{
+    background-color :  #6C2121 ;
+}
+.statusNotStatedGrid{
+    background-color :  #21276C ;
+}
+

@@ -1,0 +1,139 @@
+aside {
+  margin-right: 10px;
+  max-height: 82vh;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+aside #currentStatus {
+  height: 33vh;
+  margin-bottom: 0.7vh;
+  width: 100%;
+}
+aside #currentStatus h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+}
+aside #currentStatus .completedStatus,
+aside #currentStatus .ActiveStatus,
+aside #currentStatus .overDueStatus,
+aside #currentStatus .notStatedStatus {
+  width: 90%;
+  height: 6vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 0.2vh;
+}
+aside #currentStatus .completedStatus label,
+aside #currentStatus .ActiveStatus label,
+aside #currentStatus .overDueStatus label,
+aside #currentStatus .notStatedStatus label {
+  width: 50%;
+  height: 4.5vh;
+  border-radius: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2vh;
+  color: white;
+}
+aside #currentStatus .completedStatus p,
+aside #currentStatus .ActiveStatus p,
+aside #currentStatus .overDueStatus p,
+aside #currentStatus .notStatedStatus p {
+  color: white;
+  font-weight: 800;
+  opacity: 0.8;
+  margin-left: 10px;
+}
+aside #Catagory {
+  height: 39vh;
+  background-color: #1F2645;
+  border-radius: 2vw;
+  overflow: hidden;
+  padding: 1vh 0px 1vh 0px;
+  width: 100%;
+}
+aside #Catagory h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+}
+aside #Catagory #catContent {
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.2vh;
+}
+aside #Catagory #catContent label {
+  border-radius: 1vw;
+  width: 65%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
+aside #Catagory #catContent p {
+  color: white;
+  font-weight: 800;
+  opacity: 0.8;
+  margin-left: 10px;
+}
+aside #createNewTask {
+  background-color: rgb(40, 118, 92);
+  height: 6.5vh;
+  margin-top: 1.5vh;
+  border-radius: 1vw;
+  border: 0px;
+  color: white;
+  font-weight: 600;
+  width: 95%;
+}
+
+.WorkCatLabel {
+  background-color: #C562A6;
+}
+
+.EntertainCatLabel {
+  background-color: #00C889;
+}
+
+.SocialCatLabel {
+  background-color: #C80096;
+}
+
+.PersonalCatLabel {
+  background-color: #C89600;
+}
+
+.OthersCatLabel {
+  background-color: #C80071;
+}
+
+.CompletedLabel {
+  background-color: #216C4C;
+}
+
+.ActiveLabel {
+  background-color: #651093;
+}
+
+.OverDueLabel {
+  background-color: #6C2121;
+}
+
+.NotStatedLabel {
+  background-color: #21276C;
+}/*# sourceMappingURL=aside.css.map */

@@ -1,0 +1,164 @@
+#about {
+  position: absolute !important;
+  background-color: #322256;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 500px;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+}
+#about div {
+  background-color: rgb(11, 21, 58);
+  flex-direction: column;
+  justify-content: center;
+  min-width: 500px;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 50%;
+  top: 25vh;
+  left: 0;
+  z-index: 1;
+  display: flex;
+}
+#about div button {
+  margin-left: 10%;
+  margin-top: 1vh;
+  min-width: 100px;
+  background-color: #9C0707;
+  color: white;
+  border: 0px;
+  border-radius: 15px;
+  min-height: 25px;
+}
+
+#createClass, #modifyClass {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #322256;
+}
+#createClass #CreateMain, #createClass #ModifyMain, #modifyClass #CreateMain, #modifyClass #ModifyMain {
+  border-radius: 45px;
+  padding: 20px 20px;
+  min-width: 570px;
+  min-height: 470px;
+  background-color: rgb(11, 21, 58);
+  width: 50%;
+  height: 50%;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#createClass #CreateMain header, #createClass #ModifyMain header, #modifyClass #CreateMain header, #modifyClass #ModifyMain header {
+  width: 85%;
+  height: 5vh;
+  border-radius: 2vw;
+}
+#createClass #CreateMain #createTaskContentHolder, #createClass #CreateMain #modifyTaskContentHolder, #createClass #ModifyMain #createTaskContentHolder, #createClass #ModifyMain #modifyTaskContentHolder, #modifyClass #CreateMain #createTaskContentHolder, #modifyClass #CreateMain #modifyTaskContentHolder, #modifyClass #ModifyMain #createTaskContentHolder, #modifyClass #ModifyMain #modifyTaskContentHolder {
+  min-height: 65%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#createClass #CreateMain #createTaskContentHolder div, #createClass #CreateMain #modifyTaskContentHolder div, #createClass #ModifyMain #createTaskContentHolder div, #createClass #ModifyMain #modifyTaskContentHolder div, #modifyClass #CreateMain #createTaskContentHolder div, #modifyClass #CreateMain #modifyTaskContentHolder div, #modifyClass #ModifyMain #createTaskContentHolder div, #modifyClass #ModifyMain #modifyTaskContentHolder div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#createClass #CreateMain #createTaskContentHolder div input, #createClass #CreateMain #modifyTaskContentHolder div input, #createClass #ModifyMain #createTaskContentHolder div input, #createClass #ModifyMain #modifyTaskContentHolder div input, #modifyClass #CreateMain #createTaskContentHolder div input, #modifyClass #CreateMain #modifyTaskContentHolder div input, #modifyClass #ModifyMain #createTaskContentHolder div input, #modifyClass #ModifyMain #modifyTaskContentHolder div input {
+  padding: 5px 0px;
+}
+#createClass #CreateMain #createTaskContentHolder div #createHead, #createClass #CreateMain #createTaskContentHolder div #createDesc, #createClass #CreateMain #createTaskContentHolder div #ModifyHead, #createClass #CreateMain #createTaskContentHolder div #ModifyDesc, #createClass #CreateMain #modifyTaskContentHolder div #createHead, #createClass #CreateMain #modifyTaskContentHolder div #createDesc, #createClass #CreateMain #modifyTaskContentHolder div #ModifyHead, #createClass #CreateMain #modifyTaskContentHolder div #ModifyDesc, #createClass #ModifyMain #createTaskContentHolder div #createHead, #createClass #ModifyMain #createTaskContentHolder div #createDesc, #createClass #ModifyMain #createTaskContentHolder div #ModifyHead, #createClass #ModifyMain #createTaskContentHolder div #ModifyDesc, #createClass #ModifyMain #modifyTaskContentHolder div #createHead, #createClass #ModifyMain #modifyTaskContentHolder div #createDesc, #createClass #ModifyMain #modifyTaskContentHolder div #ModifyHead, #createClass #ModifyMain #modifyTaskContentHolder div #ModifyDesc, #modifyClass #CreateMain #createTaskContentHolder div #createHead, #modifyClass #CreateMain #createTaskContentHolder div #createDesc, #modifyClass #CreateMain #createTaskContentHolder div #ModifyHead, #modifyClass #CreateMain #createTaskContentHolder div #ModifyDesc, #modifyClass #CreateMain #modifyTaskContentHolder div #createHead, #modifyClass #CreateMain #modifyTaskContentHolder div #createDesc, #modifyClass #CreateMain #modifyTaskContentHolder div #ModifyHead, #modifyClass #CreateMain #modifyTaskContentHolder div #ModifyDesc, #modifyClass #ModifyMain #createTaskContentHolder div #createHead, #modifyClass #ModifyMain #createTaskContentHolder div #createDesc, #modifyClass #ModifyMain #createTaskContentHolder div #ModifyHead, #modifyClass #ModifyMain #createTaskContentHolder div #ModifyDesc, #modifyClass #ModifyMain #modifyTaskContentHolder div #createHead, #modifyClass #ModifyMain #modifyTaskContentHolder div #createDesc, #modifyClass #ModifyMain #modifyTaskContentHolder div #ModifyHead, #modifyClass #ModifyMain #modifyTaskContentHolder div #ModifyDesc {
+  width: 76.5%;
+}
+#createClass #CreateMain #createTaskContentHolder div #createStartTime, #createClass #CreateMain #createTaskContentHolder div #createEndTime, #createClass #CreateMain #createTaskContentHolder div #modifyEndTime, #createClass #CreateMain #createTaskContentHolder div #modifyStartTime, #createClass #CreateMain #modifyTaskContentHolder div #createStartTime, #createClass #CreateMain #modifyTaskContentHolder div #createEndTime, #createClass #CreateMain #modifyTaskContentHolder div #modifyEndTime, #createClass #CreateMain #modifyTaskContentHolder div #modifyStartTime, #createClass #ModifyMain #createTaskContentHolder div #createStartTime, #createClass #ModifyMain #createTaskContentHolder div #createEndTime, #createClass #ModifyMain #createTaskContentHolder div #modifyEndTime, #createClass #ModifyMain #createTaskContentHolder div #modifyStartTime, #createClass #ModifyMain #modifyTaskContentHolder div #createStartTime, #createClass #ModifyMain #modifyTaskContentHolder div #createEndTime, #createClass #ModifyMain #modifyTaskContentHolder div #modifyEndTime, #createClass #ModifyMain #modifyTaskContentHolder div #modifyStartTime, #modifyClass #CreateMain #createTaskContentHolder div #createStartTime, #modifyClass #CreateMain #createTaskContentHolder div #createEndTime, #modifyClass #CreateMain #createTaskContentHolder div #modifyEndTime, #modifyClass #CreateMain #createTaskContentHolder div #modifyStartTime, #modifyClass #CreateMain #modifyTaskContentHolder div #createStartTime, #modifyClass #CreateMain #modifyTaskContentHolder div #createEndTime, #modifyClass #CreateMain #modifyTaskContentHolder div #modifyEndTime, #modifyClass #CreateMain #modifyTaskContentHolder div #modifyStartTime, #modifyClass #ModifyMain #createTaskContentHolder div #createStartTime, #modifyClass #ModifyMain #createTaskContentHolder div #createEndTime, #modifyClass #ModifyMain #createTaskContentHolder div #modifyEndTime, #modifyClass #ModifyMain #createTaskContentHolder div #modifyStartTime, #modifyClass #ModifyMain #modifyTaskContentHolder div #createStartTime, #modifyClass #ModifyMain #modifyTaskContentHolder div #createEndTime, #modifyClass #ModifyMain #modifyTaskContentHolder div #modifyEndTime, #modifyClass #ModifyMain #modifyTaskContentHolder div #modifyStartTime {
+  width: 25%;
+}
+#createClass #CreateMain #createTaskContentHolder div label, #createClass #CreateMain #modifyTaskContentHolder div label, #createClass #ModifyMain #createTaskContentHolder div label, #createClass #ModifyMain #modifyTaskContentHolder div label, #modifyClass #CreateMain #createTaskContentHolder div label, #modifyClass #CreateMain #modifyTaskContentHolder div label, #modifyClass #ModifyMain #createTaskContentHolder div label, #modifyClass #ModifyMain #modifyTaskContentHolder div label {
+  width: 20%;
+  background-color: #511A6A;
+  padding: 5px 0px;
+  border-radius: 4px;
+  margin-right: 10px;
+  text-align: center;
+}
+#createClass #CreateMain #createTaskContentHolder div select, #createClass #CreateMain #modifyTaskContentHolder div select, #createClass #ModifyMain #createTaskContentHolder div select, #createClass #ModifyMain #modifyTaskContentHolder div select, #modifyClass #CreateMain #createTaskContentHolder div select, #modifyClass #CreateMain #modifyTaskContentHolder div select, #modifyClass #ModifyMain #createTaskContentHolder div select, #modifyClass #ModifyMain #modifyTaskContentHolder div select {
+  width: 76.5%;
+  padding: 5px 0px;
+  margin-left: 5px;
+}
+#createClass #CreateMain #createTaskButtonHolder, #createClass #CreateMain #modifyTaskButtonHolder, #createClass #ModifyMain #createTaskButtonHolder, #createClass #ModifyMain #modifyTaskButtonHolder, #modifyClass #CreateMain #createTaskButtonHolder, #modifyClass #CreateMain #modifyTaskButtonHolder, #modifyClass #ModifyMain #createTaskButtonHolder, #modifyClass #ModifyMain #modifyTaskButtonHolder {
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+}
+#createClass #CreateMain #createTaskButtonHolder button, #createClass #CreateMain #modifyTaskButtonHolder button, #createClass #ModifyMain #createTaskButtonHolder button, #createClass #ModifyMain #modifyTaskButtonHolder button, #modifyClass #CreateMain #createTaskButtonHolder button, #modifyClass #CreateMain #modifyTaskButtonHolder button, #modifyClass #ModifyMain #createTaskButtonHolder button, #modifyClass #ModifyMain #modifyTaskButtonHolder button {
+  width: 120px;
+  margin-left: 20px;
+  height: 5vh;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  border: 0px;
+}
+
+#about, #modifyClass, #createClass {
+  visibility: hidden;
+}
+
+#createClass div header {
+  background-color: #2B7860;
+}
+
+#modifyClass div header {
+  background-color: #816533;
+}
+
+#ModifyTaskCancelBtn, #CreateTaskCancelBtn {
+  background-color: #9C0707;
+}
+
+#ModifyTaskCreateBtn {
+  background-color: #819106;
+}
+
+x #CreateTaskCreateBtn {
+  background-color: #02AA02;
+}
+
+#subheading #subAddBtns .dropdown .dropdown-menu a {
+  background-color: white !important;
+  color: black !important;
+  text-decoration: none !important;
+  text-align: start;
+}
+
+@media screen and (max-width: 490px) {
+  #CreateMain, #ModifyMain {
+    zoom: 0.7;
+  }
+  .buttonC {
+    width: 40px !important;
+    min-width: 40px !important;
+    max-width: 45px !important;
+    margin-left: 5px !important;
+    margin-right: 0px !important;
+  }
+}/*# sourceMappingURL=buttons.css.map */

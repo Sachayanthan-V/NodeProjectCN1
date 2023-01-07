@@ -1,0 +1,21 @@
+{
+  "name": "realpro",
+  "version": "1.0.0",
+  "description": "Todo : To plan about the life in an efficient way!..",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "personal_todo"
+  ],
+  "author": "SachayanthanV",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "jquery": "^3.6.3",
+    "mongoose": "^5.5.2",
+    "popper.js": "^1.16.1"
+  }
+}
